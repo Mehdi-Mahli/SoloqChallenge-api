@@ -11,6 +11,15 @@ app.use((req, res, next) => {
 });
 
 const RIOT_API_KEY = process.env.RIOT_API_KEY;
+/* ========================= */
+/* 🧠 CACHE SERVEUR */
+/* ========================= */
+let cache = {
+  data: null,
+  lastUpdate: 0
+};
+
+const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
 
 /* ========================= */
 /* VALEUR DES RANKS */
@@ -83,6 +92,13 @@ const UNRANKED_TOTAL_LP = 0;
 /* ========================= */
 app.get("/api/refresh", async (req, res) => {
   try {
+    const now = Date.now();
+
+    // ✅ Si cache valide → on renvoie direct
+    if (cache.data && now - cache.lastUpdate < CACHE_DURATION) {
+      return res.json(cache.data);
+    }
+
     const results = [];
     for (const p of players) {
   const [gameName, tagLine] = p.riotId.split("#");
@@ -150,9 +166,11 @@ app.get("/api/refresh", async (req, res) => {
 });
 
 }
-
-
     results.sort((a, b) => b.score - a.score);
+    cache = {
+      data: results,
+      lastUpdate: Date.now()
+    };
     res.json(results);
 
   } catch (err) {
