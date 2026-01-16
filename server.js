@@ -29,7 +29,7 @@ const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
 /* JOUEURS */
 /* ========================= */
 const players = [
-  { name: "Slarix", riotId: "Shinara212#EUW", team: "Green", role: "TOP", minRank:"EMERALD II" },
+  { name: "Slarix", riotId: "perfect disaster#SoloQ", team: "Green", role: "TOP", minRank:"EMERALD II" },
   { name: "Erwan", riotId: "Kaminari#SoloQ", team: "Red", role: "MID", minRank:"EMERALD II"  },
   { name: "Maxa", riotId: "ABSOLUTE CINEMA#SoloQ", team: "Blue", role: "TOP", minRank:"EMERALD II" },
   { name: "Wisper", riotId: "Taloned#SoloQ", team: "Green", role: "JUNGLE", minRank:"EMERALD II" },
@@ -37,7 +37,7 @@ const players = [
   { name: "Mehdi", riotId: "King Is Back#SoloQ", team: "Red", role: "JUNGLE", minRank:"PLATINUM II" },
   { name: "Badr", riotId: "la toupie cassée#SoloQ", team: "Red", role: "TOP", minRank:"PLATINUM IV" },
   { name: "Willy", riotId: "little monster#SoloQ", team: "Red", role: "MID", minRank:"PLATINUM IV" },
-  { name: "Alexis", riotId: "Prey#667", team: "Blue", role: "ADC", minRank:"PLATINUM II" },
+  { name: "Alexis", riotId: "First Time Enjoy#SoloQ", team: "Blue", role: "ADC", minRank:"PLATINUM II" },
   { name: "Phi", riotId: "2ndBestADC#SoloQ", team: "Green", role: "ADC", minRank:"PLATINUM IV" },
   { name: "Achraf", riotId: "ExcedrynAbuser#212", team: "Blue", role: "TOP", minRank:"GOLD II" },
   { name: "Bilel", riotId: "Gol D Booster#SoloQ", team: "Green", role: "JUNGLE", minRank:"GOLD IV" },
