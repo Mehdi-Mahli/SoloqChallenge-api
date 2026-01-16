@@ -29,7 +29,7 @@ const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
 /* JOUEURS */
 /* ========================= */
 const players = [
-  { name: "Slarix", riotId: "ff15#212", team: "Green", role: "TOP", minRank:"EMERALD II" },
+  { name: "Slarix", riotId: "Shinara212#EUW", team: "Green", role: "TOP", minRank:"EMERALD II" },
   { name: "Erwan", riotId: "Kaminari#SoloQ", team: "Red", role: "MID", minRank:"EMERALD II"  },
   { name: "Maxa", riotId: "ABSOLUTE CINEMA#SoloQ", team: "Blue", role: "TOP", minRank:"EMERALD II" },
   { name: "Wisper", riotId: "Taloned#SoloQ", team: "Green", role: "JUNGLE", minRank:"EMERALD II" },
