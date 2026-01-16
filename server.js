@@ -2,6 +2,12 @@ const express = require("express");
 const axios = require("axios");
 require("dotenv").config();
 
+const TEAM_PENALTIES = {
+  Red: 0,
+  Blue: 0,
+  Green: 0
+};
+
 const app = express();
 app.use(express.json());
 
