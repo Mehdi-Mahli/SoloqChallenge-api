@@ -37,7 +37,7 @@ const players = [
   { name: "Mehdi", riotId: "King Is Back#SoloQ", team: "Red", role: "JUNGLE", minRank:"PLATINUM II" },
   { name: "Badr", riotId: "la toupie cassée#SoloQ", team: "Red", role: "TOP", minRank:"PLATINUM IV" },
   { name: "Willy", riotId: "little monster#SoloQ", team: "Red", role: "MID", minRank:"PLATINUM IV" },
-  { name: "Alexis", riotId: "First Time Enjoy#SoloQ", team: "Blue", role: "ADC", minRank:"PLATINUM II" },
+  { name: "Alexis", riotId: "Prey#667", team: "Blue", role: "ADC", minRank:"PLATINUM II" },
   { name: "Phi", riotId: "2ndBestADC#SoloQ", team: "Green", role: "ADC", minRank:"PLATINUM IV" },
   { name: "Achraf", riotId: "ExcedrynAbuser#212", team: "Blue", role: "TOP", minRank:"GOLD II" },
   { name: "Bilel", riotId: "Gol D Booster#SoloQ", team: "Green", role: "JUNGLE", minRank:"GOLD IV" },
