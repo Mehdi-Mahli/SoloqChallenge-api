@@ -98,8 +98,12 @@ app.get("/api/refresh", async (req, res) => {
 
     // ✅ Si cache valide → on renvoie direct
     if (cache.data && now - cache.lastUpdate < CACHE_DURATION) {
-      return res.json(cache.data);
-    }
+  return res.json({
+    data: cache.data,
+    lastUpdate: cache.lastUpdate
+  });
+}
+
 
     const results = [];
     for (const p of players) {
@@ -170,10 +174,15 @@ app.get("/api/refresh", async (req, res) => {
 }
     results.sort((a, b) => b.score - a.score);
     cache = {
-      data: results,
-      lastUpdate: Date.now()
-    };
-    res.json(results);
+  data: results,
+  lastUpdate: Date.now()
+};
+
+res.json({
+  data: cache.data,
+  lastUpdate: cache.lastUpdate
+});
+
 
   } catch (err) {
     console.error(err.response?.data || err.message);
