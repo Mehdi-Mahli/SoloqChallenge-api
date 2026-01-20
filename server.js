@@ -35,7 +35,7 @@ const players = [
   { name: "Maxa", riotId: "ABSOLUTE CINEMA#SoloQ", team: "Red", role: "TOP", minRank:"EMERALD II" },
   { name: "Wisper", riotId: "Taloned#SoloQ", team: "Blue", role: "JUNGLE", minRank:"DIAMOND IV" },
   { name: "Dax", riotId: "Tristana#SoloQ", team: "Blue", role: "ADC", minRank:"EMERALD IV" },
-  { name: "Mehdi", riotId: "King Is Back#SoloQ", team: "Yellow", role: "JUNGLE", minRank:"EMERALD IV" },
+  { name: "Mehdi", riotId: "King Is Back#SoloQ", team: "Yellow", role: "JUNGLE", minRank:"EMERALD IV",_removeGames: 2,_removeWins: 2,_removeLosses: 0 },
   { name: "Tam", riotId: "Kanawin#SoloQ", team: "Red", role: "ADC", minRank:"EMERALD IV" },
   { name: "Thousand", riotId: "Tamestgros#SoloQ", team: "Yellow", role: "TOP", minRank:"EMERALD IV" },
   { name: "Marmotte", riotId: "Number 1 Agent#SoloQ", team: "Blue", role: "ADC", minRank:"EMERALD IV" },
@@ -151,6 +151,17 @@ app.get("/api/refresh", async (req, res) => {
     winrate = Math.round((wins / games) * 100);
     rank = `${soloQ.tier} ${soloQ.rank}`;
   }
+// 🔒 AJUSTEMENT INVISIBLE DES STATS (serveur only)
+const removeGames = p._removeGames || 0;
+const removeWins = p._removeWins || 0;
+const removeLosses = p._removeLosses || 0;
+
+games = Math.max(0, games - removeGames);
+wins = Math.max(0, wins - removeWins);
+losses = Math.max(0, losses - removeLosses);
+
+winrate = games > 0 ? Math.round((wins / games) * 100) : 0;
+
 
   // 🎯 score (positif OU négatif)
   const minTotalLP = parseMinRank(p.minRank);
