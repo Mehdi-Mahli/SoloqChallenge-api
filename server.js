@@ -31,7 +31,7 @@ const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
 
 const players = [
   { name: "Slarix", riotId: "perfect disaster#SoloQ", team: "Blue", role: "TOP", minRank:"EMERALD II" },
-  { name: "Erwan", riotId: "Kaminari#SoloQ", team: "Yellow", role: "MID", minRank:"EMERALD II"  },
+  { name: "Erwan", riotId: "Kaminari#SoloQ", team: "Yellow", role: "MID", minRank:"EMERALD II",_removeGames: 19,_removeWins: 15,_removeLosses: 4  },
   { name: "Maxa", riotId: "ABSOLUTE CINEMA#SoloQ", team: "Red", role: "TOP", minRank:"EMERALD II",_removeGames: 30,_removeWins: 28,_removeLosses: 2 },
   { name: "Wisper", riotId: "Taloned#SoloQ", team: "Blue", role: "JUNGLE", minRank:"DIAMOND IV" },
   { name: "Dax", riotId: "Tristana#SoloQ", team: "Blue", role: "ADC", minRank:"EMERALD IV" },
