@@ -39,7 +39,7 @@ const players = [
   { name: "Tam", riotId: "Kanawin#SoloQ", team: "Red", role: "ADC", minRank:"EMERALD IV" },
   { name: "Thousand", riotId: "Tamestgros#SoloQ", team: "Yellow", role: "TOP", minRank:"EMERALD IV" },
   { name: "Marmotte", riotId: "Number 1 Agent#SoloQ", team: "Blue", role: "ADC", minRank:"EMERALD IV" },
-  { name: "Alexis", riotId: "First Time Enjoy#SoloQ", team: "Yellow", role: "JUNGLE", minRank:"EMERALD IV" },
+  { name: "Alexis", riotId: "First Time Enjoy#SoloQ", team: "Yellow", role: "JUNGLE", minRank:"EMERALD IV",_removeGames: 2,_removeWins: 2,_removeLosses: 0 },
   { name: "Badr", riotId: "la toupie cassée#SoloQ", team: "Blue", role: "TOP", minRank:"PLATINUM II" },
   { name: "Willy", riotId: "little monster#SoloQ", team: "Red", role: "MID", minRank:"PLATINUM II" },
   { name: "Phi", riotId: "2ndBestADC#SoloQ", team: "Yellow", role: "ADC", minRank:"PLATINUM II" },
