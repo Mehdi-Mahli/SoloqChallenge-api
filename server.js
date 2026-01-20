@@ -32,23 +32,23 @@ const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
 const players = [
   { name: "Slarix", riotId: "perfect disaster#SoloQ", team: "Blue", role: "TOP", minRank:"EMERALD II" },
   { name: "Erwan", riotId: "Kaminari#SoloQ", team: "Yellow", role: "MID", minRank:"EMERALD II"  },
-  { name: "Maxa", riotId: "ABSOLUTE CINEMA#SoloQ", team: "Red", role: "TOP", minRank:"EMERALD II" },
+  { name: "Maxa", riotId: "ABSOLUTE CINEMA#SoloQ", team: "Red", role: "TOP", minRank:"EMERALD II",_removeGames: 30,_removeWins: 28,_removeLosses: 2 },
   { name: "Wisper", riotId: "Taloned#SoloQ", team: "Blue", role: "JUNGLE", minRank:"DIAMOND IV" },
   { name: "Dax", riotId: "Tristana#SoloQ", team: "Blue", role: "ADC", minRank:"EMERALD IV" },
   { name: "Mehdi", riotId: "King Is Back#SoloQ", team: "Yellow", role: "JUNGLE", minRank:"EMERALD IV",_removeGames: 2,_removeWins: 2,_removeLosses: 0 },
-  { name: "Tam", riotId: "Kanawin#SoloQ", team: "Red", role: "ADC", minRank:"EMERALD IV" },
+  { name: "Tam", riotId: "Kanawin#SoloQ", team: "Red", role: "ADC", minRank:"EMERALD IV",_removeGames: 22,_removeWins: 16,_removeLosses: 6 },
   { name: "Thousand", riotId: "Tamestgros#SoloQ", team: "Yellow", role: "TOP", minRank:"EMERALD IV" },
   { name: "Marmotte", riotId: "Number 1 Agent#SoloQ", team: "Blue", role: "ADC", minRank:"EMERALD IV" },
   { name: "Alexis", riotId: "First Time Enjoy#SoloQ", team: "Yellow", role: "JUNGLE", minRank:"EMERALD IV",_removeGames: 2,_removeWins: 2,_removeLosses: 0 },
   { name: "Badr", riotId: "la toupie cassée#SoloQ", team: "Blue", role: "TOP", minRank:"PLATINUM II" },
   { name: "Willy", riotId: "little monster#SoloQ", team: "Red", role: "MID", minRank:"PLATINUM II" },
-  { name: "Phi", riotId: "2ndBestADC#SoloQ", team: "Yellow", role: "ADC", minRank:"PLATINUM II" },
+  { name: "Phi", riotId: "2ndBestADC#SoloQ", team: "Yellow", role: "ADC", minRank:"PLATINUM II",_removeGames: 18,_removeWins: 15,_removeLosses: 3 },
   { name: "Zak", riotId: "Rkaz Primal#SoloQ", team: "Blue", role: "JUNGLE", minRank:"GOLD II" },
   { name: "Achraf", riotId: "ExcedrynAbuser#212", team: "Red", role: "TOP", minRank:"GOLD II" },
   { name: "Bilel", riotId: "Gol D Booster#SoloQ", team: "Yellow", role: "JUNGLE", minRank:"GOLD IV" },
-  { name: "Micka", riotId: "Very big bad mid#SoloQ", team: "Red", role: "MID", minRank:"GOLD IV" },
+  { name: "Micka", riotId: "Very big bad mid#SoloQ", team: "Red", role: "MID", minRank:"GOLD IV",_removeGames: 5,_removeWins: 3,_removeLosses: 2 },
   { name: "Nishen", riotId: "ALFORD KADEEM#SoloQ", team: "Red", role: "JUNGLE", minRank:"GOLD IV" },
-  { name: "Sevko", riotId: "SheLovesSevko#SoloQ", team: "Blue", role: "JUNGLE", minRank:"GOLD IV" },
+  { name: "Sevko", riotId: "SheLovesSevko#SoloQ", team: "Blue", role: "JUNGLE", minRank:"GOLD IV",_removeGames: 17,_removeWins: 10,_removeLosses: 5 },
 
 ];
 
