@@ -19,7 +19,7 @@ let cache = {
   lastUpdate: 0
 };
 
-const CACHE_DURATION = 15 * 60 * 1000; // 15 minutes
+const CACHE_DURATION = 5 * 60 * 1000; // 15 minutes
 
 /* ========================= */
 /* VALEUR DES RANKS */
@@ -206,4 +206,5 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`✅ Serveur lancé sur le port ${PORT}`);
 });
+
 
