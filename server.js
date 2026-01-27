@@ -38,7 +38,7 @@ const players = [
   { name: "Mehdi", riotId: "King Is Back#SoloQ", team: "Yellow", role: "JUNGLE", minRank:"EMERALD IV",_removeGames: 2,_removeWins: 2,_removeLosses: 0 },
   { name: "Tam", riotId: "Kanawin#SoloQ", team: "Red", role: "ADC", minRank:"EMERALD IV",_removeGames: 22,_removeWins: 16,_removeLosses: 6 },
   { name: "Thousand", riotId: "Tamestgros#SoloQ", team: "Yellow", role: "TOP", minRank:"EMERALD IV" },
-  { name: "Marmotte", riotId: "Number 1 Agent#SoloQ", team: "Blue", role: "ADC", minRank:"EMERALD IV" },
+  { name: "Marmotte", riotId: "Number 1 Agent#SoloQ", team: "Blue", role: "ADC", minRank:"EMERALD IV",_removeGames: 40,_removeWins: 25,_removeLosses: 15 },
   { name: "Alexis", riotId: "First Time Enjoy#SoloQ", team: "Yellow", role: "JUNGLE", minRank:"EMERALD IV",_removeGames: 2,_removeWins: 2,_removeLosses: 0 },
   { name: "Badr", riotId: "la toupie cassée#SoloQ", team: "Blue", role: "TOP", minRank:"PLATINUM II" },
   { name: "Willy", riotId: "little monster#SoloQ", team: "Red", role: "MID", minRank:"PLATINUM II",_removeGames: 21,_removeWins: 16,_removeLosses: 5 },
@@ -206,6 +206,7 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`✅ Serveur lancé sur le port ${PORT}`);
 });
+
 
 
 
