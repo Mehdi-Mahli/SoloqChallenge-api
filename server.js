@@ -37,14 +37,14 @@ const players = [
   { name: "Dax", riotId: "Tristana#SoloQ", team: "Blue", role: "ADC", minRank:"EMERALD IV",_removeGames: 35,_removeWins: 27,_removeLosses: 8 },
   { name: "Mehdi", riotId: "King Is Back#SoloQ", team: "Yellow", role: "JUNGLE", minRank:"EMERALD IV",_removeGames: 2,_removeWins: 2,_removeLosses: 0 },
   { name: "Tam", riotId: "Kanawin#SoloQ", team: "Red", role: "ADC", minRank:"EMERALD IV",_removeGames: 22,_removeWins: 16,_removeLosses: 6 },
-  { name: "Thousand", riotId: "Tamestgros#SoloQ", team: "Yellow", role: "TOP", minRank:"EMERALD IV" },
+  { name: "Thousand", riotId: "Tamestgros#SoloQ", team: "Yellow", role: "TOP", minRank:"EMERALD IV"_removeGames: 32,_removeWins: 26,_removeLosses: 6 },
   { name: "Marmotte", riotId: "Number 1 Agent#SoloQ", team: "Blue", role: "ADC", minRank:"EMERALD IV",_removeGames: 40,_removeWins: 25,_removeLosses: 15 },
   { name: "Alexis", riotId: "First Time Enjoy#SoloQ", team: "Yellow", role: "JUNGLE", minRank:"EMERALD IV",_removeGames: 2,_removeWins: 2,_removeLosses: 0 },
   { name: "Badr", riotId: "la toupie cassée#SoloQ", team: "Blue", role: "TOP", minRank:"PLATINUM II" },
   { name: "Willy", riotId: "little monster#SoloQ", team: "Red", role: "MID", minRank:"PLATINUM II",_removeGames: 21,_removeWins: 16,_removeLosses: 5 },
   { name: "Phi", riotId: "2ndBestADC#SoloQ", team: "Yellow", role: "ADC", minRank:"PLATINUM II",_removeGames: 18,_removeWins: 15,_removeLosses: 3 },
-  { name: "Zak", riotId: "Rkaz Primal#SoloQ", team: "Blue", role: "JUNGLE", minRank:"GOLD II" },
-  { name: "Achraf", riotId: "ExcedrynAbuser#212", team: "Red", role: "TOP", minRank:"GOLD II" },
+  { name: "Zak", riotId: "Rkaz Primal#SoloQ", team: "Blue", role: "JUNGLE", minRank:"SILVER I" },
+  { name: "Achraf", riotId: "ExcedrynAbuser#212", team: "Red", role: "TOP", minRank:"SILVER I" },
   { name: "Bilel", riotId: "Gol D Booster#SoloQ", team: "Yellow", role: "JUNGLE", minRank:"GOLD IV" },
   { name: "Micka", riotId: "Very big bad mid#SoloQ", team: "Red", role: "MID", minRank:"GOLD IV",_removeGames: 5,_removeWins: 3,_removeLosses: 2 },
   { name: "Nishen", riotId: "ALFORD KADEEM#SoloQ", team: "Red", role: "JUNGLE", minRank:"GOLD IV" },
@@ -206,6 +206,7 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`✅ Serveur lancé sur le port ${PORT}`);
 });
+
 
 
 
