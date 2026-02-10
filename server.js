@@ -43,7 +43,7 @@ const players = [
   { name: "Badr", riotId: "la toupie cassée#SoloQ", team: "Blue", role: "TOP", minRank:"PLATINUM II" },
   { name: "Willy", riotId: "little monster#SoloQ", team: "Red", role: "MID", minRank:"PLATINUM II",_removeGames: 21,_removeWins: 16,_removeLosses: 5 },
   { name: "Phi", riotId: "2ndBestADC#SoloQ", team: "Yellow", role: "ADC", minRank:"PLATINUM II",_removeGames: 18,_removeWins: 15,_removeLosses: 3 },
-  { name: "Zak", riotId: "Rkaz Primal#SoloQ", team: "Blue", role: "JUNGLE", minRank:"GOLD II" },
+  { name: "Zak", riotId: "Rkaz Primal#SoloQ", team: "Blue", role: "JUNGLE", minRank:"GOLD II",_removeGames: 24,_removeWins: 17,_removeLosses: 7 },
   { name: "Achraf", riotId: "ExcedrynAbuser#212", team: "Red", role: "TOP", minRank:"GOLD II" },
   { name: "Bilel", riotId: "Gol D Booster#SoloQ", team: "Yellow", role: "JUNGLE", minRank:"GOLD IV" },
   { name: "Micka", riotId: "Very big bad mid#SoloQ", team: "Red", role: "MID", minRank:"GOLD IV",_removeGames: 5,_removeWins: 3,_removeLosses: 2 },
@@ -206,6 +206,7 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`✅ Serveur lancé sur le port ${PORT}`);
 });
+
 
 
 
