@@ -45,7 +45,15 @@ const players = [
   { name: "Phi", riotId: "2ndBestADC#SoloQ", team: "Yellow", role: "ADC", minRank:"PLATINUM II",_removeGames: 18,_removeWins: 15,_removeLosses: 3 },
   { name: "Zak", riotId: "Rkaz Primal#SoloQ", team: "Blue", role: "JUNGLE", minRank:"GOLD II",_removeGames: 24,_removeWins: 17,_removeLosses: 7 },
   { name: "Achraf", riotId: "ExcedrynAbuser#212", team: "Red", role: "TOP", minRank:"GOLD II" },
-  { name: "Bilel", riotId: "Gol D Booster#SoloQ", team: "Yellow", role: "JUNGLE", minRank:"GOLD IV" },
+  { name: "Bilel", riotId: "Gol D Booster#SoloQ", team: "Yellow", role: "JUNGLE", minRank:"GOLD IV", _locked: true,
+  _finalStats: {
+    rank: "PLATINUM II",
+    lp: 3,
+    wins: 53,
+    losses: 47,
+    games: 100,
+    winrate: 53 }
+  },
   { name: "Micka", riotId: "Very big bad mid#SoloQ", team: "Red", role: "MID", minRank:"GOLD IV",_removeGames: 5,_removeWins: 3,_removeLosses: 2 },
   { name: "Nishen", riotId: "ALFORD KADEEM#SoloQ", team: "Red", role: "JUNGLE", minRank:"GOLD IV" },
   { name: "Sevko", riotId: "SheLovesSevko#SoloQ", team: "Blue", role: "JUNGLE", minRank:"GOLD IV",_removeGames: 17,_removeWins: 10,_removeLosses: 5 },
@@ -107,6 +115,37 @@ app.get("/api/refresh", async (req, res) => {
 
     const results = [];
     for (const p of players) {
+      // 🔒 SI JOUEUR LOCK → on renvoie ses stats finales
+if (p._locked) {
+
+  const minTotalLP = parseMinRank(p.minRank);
+
+  const playerTotalLP = getTotalLP(
+    p._finalStats.rank.split(" ")[0],
+    p._finalStats.rank.split(" ")[1],
+    p._finalStats.lp
+  );
+
+  const score = playerTotalLP - minTotalLP;
+
+  results.push({
+    name: p.name,
+    riotId: p.riotId,
+    team: p.team,
+    role: p.role,
+    rank: p._finalStats.rank,
+    lp: p._finalStats.lp,
+    score,
+    games: p._finalStats.games,
+    wins: p._finalStats.wins,
+    losses: p._finalStats.losses,
+    winrate: p._finalStats.winrate,
+    minRank: p.minRank,
+  });
+
+  continue;
+}
+
   const [gameName, tagLine] = p.riotId.split("#");
 
   // Account
@@ -206,6 +245,7 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`✅ Serveur lancé sur le port ${PORT}`);
 });
+
 
 
 
